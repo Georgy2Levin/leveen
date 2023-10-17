@@ -1,0 +1,65 @@
+body {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 10px;
+	color: #990000;
+	scrollbar-track-color: #00CC99;
+	scrollbar-base-color: #990000;
+	scrollbar-face-color: #00CC99;
+	scrollbar-arrow-color: #990000;
+	scrollbar-darkshadow-color: #00CC99;
+	scrollbar-highlight-color: #00CC99;
+	background-color: #CCFFCC;
+	background-image: url(top/300.jpg);
+	background-repeat: repeat;
+}
+
+table {
+	margin-left:auto;
+	margin-right:auto;
+	background-color: 00CC99;
+ }
+
+td{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 10px;
+}
+
+a{
+	text-decoration: none;
+	color: #990000;
+	font-size: 10px;
+}
+
+li a:hover img{
+	margin: 0px;
+	padding: 10px 9px 9px 10px;
+	background-color: #00CC99;
+	border-top: 1px solid #CCFFCC;
+	border-right: 2px solid #990000;
+	border-bottom: 2px solid #990000;
+	border-left: 1px solid #CCFFCC;
+	
+}
+
+li a img{
+	border: 1px solid #990000;
+	margin: 10px;
+	padding: 0px;
+moz-border-radius: 50px; /* закругление для старых Mozilla Firefox */
+webkit-border-radius: 50px; /* закругление для старых Chrome и Safari */
+khtml-border-radius: 50px; /* закругл. для браузера Konquerer системы Linux */
+border-radius: 50px; /* закругление углов для всех, кто понимает */
+}
+
+a:hover {
+	color: #00CC99;
+	background-color: #990000;
+}
+
+li{
+	margin: 0px;
+	padding: 0px;
+	display: inline;
+	list-style-type: none;
+}

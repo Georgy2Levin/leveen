@@ -1,0 +1,14 @@
+body {
+	margin: 0px;
+	background-color: #000000;
+}
+table {
+	text-align: center;
+	vertical-align: middle;
+	height: 600px;
+	width: 800px;
+
+}
+img {
+	border: 1px solid #ffffff;
+}
