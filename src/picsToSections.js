@@ -1,13 +1,15 @@
-import addImgListeners from "./pic.js";
-
-import { arPics } from "../src/arPic.js";
+import addImgListeners from "./picListener.js";
+const arPics = fetch ("/src/pic.json")
+    .then(res => res.json())
+    .then(j => j.pics); 
 
 const picSection = document.querySelector(".pic-section");
 const PICS_IN_SECTION = 96;
 
-function fillSection(n) {
-    const nNum = +n;    
-    const arObjPics = arPics;
+async function fillSection(n) {
+    const nNum = +n;
+   
+    const arObjPics = await arPics;
     let q = nNum * PICS_IN_SECTION;
         let stringImgs = '';
         const length = arObjPics.length;
