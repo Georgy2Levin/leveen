@@ -1,17 +1,17 @@
 const header = document.querySelector("header");
 const mainElement = document.querySelector("main");
-const txtContainer = document.getElementById('txt-container');
-const hrImg = document.querySelectorAll(".hr-img");
+const txtContainer = document.getElementById("txt-container");
+const hrImg = document.getElementById("hr-img");
 const DIR = '/txt/';
 const ext = '.txt';
 
 export class TxtViewer {
-    constructor(clickClass) {
-        this.addClickListener(clickClass);
+    constructor() {
+        this.addClickListener();
 }
 
-addClickListener(clickClass) {
-    const arSpans = document.querySelectorAll(`.${clickClass}`);
+addClickListener() {
+    const arSpans = document.querySelectorAll("[for-click]");
     arSpans.forEach(s => s.addEventListener("click", () => this.showTxt(s.getAttribute("for-click"))));
 }
 
@@ -43,5 +43,5 @@ document.querySelector(".div-close button").addEventListener("click", () => clos
 function closeTxtContainer(bool) {
     txtContainer.hidden = bool;
     header.hidden = !bool;
-    hrImg[1].hidden = bool;
+    hrImg.hidden = bool;
 }   

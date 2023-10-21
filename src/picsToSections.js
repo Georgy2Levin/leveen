@@ -1,19 +1,17 @@
 import addImgListeners from "./picListener.js";
-const arPics = fetch ("/src/pic.json")
+const arPics = fetch("/src/pic.json")
     .then(res => res.json())
     .then(j => j.pics); 
 
 const picSection = document.querySelector(".pic-section");
 const PICS_IN_SECTION = 96;
 
-async function fillSection(n) {
-    const nNum = +n;
-   
+async function fillSection(num) {
     const arObjPics = await arPics;
-    let q = nNum * PICS_IN_SECTION;
+    let q = num * PICS_IN_SECTION;
         let stringImgs = '';
         const length = arObjPics.length;
-        const limit = (nNum + 1) * PICS_IN_SECTION;
+        const limit = (num + 1) * PICS_IN_SECTION;
         while(q < limit && q < length) {
             let obj = arObjPics[q];
             stringImgs += fillTheImg(obj);            
