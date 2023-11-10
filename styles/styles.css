@@ -213,8 +213,10 @@ main::-webkit-scrollbar {
 header {
 	position: relative;	
 }
-.scroll-button, select {
+.scroll-button {
 	position: absolute;
+}
+.scroll-button, select {
 	background-color: lightblue;	
 	color: #660000;
 	border: solid;
@@ -232,8 +234,7 @@ header {
 }
 select {
 	font-family: roboto;
-	left: 1vh;
-	top: 1vh;
+	margin: 1px;
 }
 .pic-section {
 	display: flex;
@@ -259,7 +260,7 @@ select {
 	border-color: #660000;
 	cursor: zoom-in;
 }
-.detail-container {		
+.detail-container, .select {		
 	position: relative;
 	background-color: #00CC99;
 	width: var(--mobile-width);
@@ -289,7 +290,7 @@ select {
 	header, main, footer {
 		width: 800px;
 	}
-	header, main, footer {
+	header, main, footer, .select {
 		background-image: url(../top/bgh.gif);
 		background-repeat: repeat;		
 	}
@@ -373,9 +374,6 @@ select {
 		left: calc(50vw + 370px);
 		background-color: #00CC99;
 	}
-	select {
-		left: calc(50vw - 370px);
-	}
 	.pic-section {
 		width: 90%;	
 	}
@@ -383,7 +381,7 @@ select {
 		width:initial;
 		margin: 8px;
 	}
-	.detail-container {
+	.detail-container, .select {
 		width: 800px;
 	}
 	.div-pic img{
