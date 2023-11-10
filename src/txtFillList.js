@@ -2,17 +2,16 @@ import { TxtViewer } from "./ui/TxtViewer.js";
 
 const listTxt = document.querySelector(".list-txt");
 
-async function fillListTxt() {
-    listTxt.innerHTML  =  await fetch("/src/txt.json")
-                    .then(res => res.json())
-                    .then(json => fillDivs(json));
-
-        new TxtViewer();
+function fillListTxt() {
+    fetch("/src/txt.json")
+        .then(res => res.json())
+        .then(json => listTxt.innerHTML = fillDivs(json))
+        .finally(() => new TxtViewer());
 }
 
 function fillDivs(json) {
-    let s ='';
-    for(const key in json) {
+    let s = '';
+    for (const key in json) {
         s += `<div class="${key}">${fillSpans(json[key])}</div>`;
     }
     return s;

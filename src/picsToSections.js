@@ -7,6 +7,7 @@ const picSection = document.querySelector(".pic-section");
 const PICS_IN_SECTION = 96;
 
 async function fillSection(num) {
+    num = +num;
     const arObjPics = await arPics;
     let q = num * PICS_IN_SECTION;
         let stringImgs = '';
