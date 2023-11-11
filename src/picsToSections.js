@@ -4,7 +4,7 @@ const arPics = fetch("/src/pic.json")
     .then(j => j.pics); 
 
 const picSection = document.querySelector(".pic-section");
-const PICS_IN_SECTION = 96;
+const PICS_IN_SECTION = 84;
 
 async function fillSection(num) {
     num = +num;
