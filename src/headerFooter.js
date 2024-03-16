@@ -38,8 +38,8 @@ footer.innerHTML = `<img class="hr-img" src="top/hr600.gif">
     <div class="txt-menu-bottom">
       ${txtMenu}
     </div> 
-    <div class="copyright">leveen@yandex.ru
-     &copy; 2004 - 2023
+    <div class="copyright">0586534332georgy@gmail.com
+     &copy; 2004 - 2024
     </div>`
 
 function onOverOut(name, pic) {
