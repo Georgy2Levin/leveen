@@ -1,5 +1,5 @@
 import addImgListeners from "./picListener.js";
-const arPics = fetch("/src/pic.json")
+const arPics = fetch("/src/pic_light.json")
     .then(res => res.json())
     .then(j => j.pics); 
 
@@ -23,7 +23,10 @@ async function fillSection(num) {
 
 }
 function fillTheImg(obj) {
-    return `<img src="${obj.img_src}" alt="${obj.alt}" detail-image-src="${obj.detail_image_src}" title="${obj.title}">`
+    const dir = "/pic/";
+    const thumb_img_src = dir + obj.img_name + "_m.jpg";
+    const detail_image_src = dir + obj.img_name + ".jpg";
+    return `<img src="${thumb_img_src}" alt="${obj.img_title}" detail-image-src="${detail_image_src}" title="${obj.img_title}">`
 }
 
 fillSection(0);
